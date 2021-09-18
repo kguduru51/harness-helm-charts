@@ -10,7 +10,8 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
-imagePullSecrets: artifactorycred
+imagePullSecrets: 
+  - name: artifactorycred
 nameOverride: "swift-java-spring-boot"
 fullnameOverride: "swift-java-spring-boot"
 
