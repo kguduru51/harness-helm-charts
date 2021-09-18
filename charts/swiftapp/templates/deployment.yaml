@@ -38,6 +38,14 @@ spec:
             - name: http
               containerPort: {{ .Values.container.port }}
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: {{ .Values.container.path }}
+              port: http
+          readinessProbe:
+            httpGet:
+              path: {{ .Values.container.path }}
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
