@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/kguduru51/helm-charts/releases/download/swiftapp-0.1.1/swiftapp-0.1.1.tgz
     version: 0.1.1
+  swiftapp2:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-09-18T19:19:57.921134234Z"
+    description: A Helm chart for Kubernetes
+    digest: 6398bc7df8af7d9e459aad6f8b37317cc78f8b87d6d87478a4dde22b9804d050
+    name: swiftapp2
+    type: application
+    urls:
+    - https://github.com/kguduru51/helm-charts/releases/download/swiftapp2-0.1.0/swiftapp2-0.1.0.tgz
+    version: 0.1.0
 generated: "2021-09-18T18:36:12.117499463Z"
