@@ -11,6 +11,7 @@ spec:
   selector:
     matchLabels:
       {{- include "swiftapp.selectorLabels" . | nindent 6 }}
+  minReadySeconds: {{ .Values.minReadySeconds }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -37,14 +38,6 @@ spec:
             - name: http
               containerPort: {{ .Values.container.port }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
